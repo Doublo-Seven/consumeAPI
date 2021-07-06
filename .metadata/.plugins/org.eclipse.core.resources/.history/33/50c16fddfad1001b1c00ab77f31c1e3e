@@ -1,0 +1,5 @@
+package be.kbc.internal.cts.service;
+
+public class UserService {
+
+}

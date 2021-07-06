@@ -1,0 +1,8 @@
+1624816525905	Move 'login.jsp' to 'webapp'
+1624816534361	Move 'login.jsp' to 'screens'
+1624816539267	Move 'screens' to 'webapp'
+1624816551112	Move 'screens' to 'WEB-INF'
+1624818221264	Move 'login.jsp' to 'static'
+1624818239750	Copy file
+1624818606760	Move 'webapp' to 'main'
+1624818673445	Delete element

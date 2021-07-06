@@ -1,0 +1,69 @@
+package be.kbc.internal.cts.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class SurveyResult {
+
+	@Id
+	private int surveyResultId;
+	
+	@OneToOne
+	@Column(name = "surveyId")
+	private Survey surveyId;
+	
+	@OneToOne
+	@Column(name = "questionId")
+	private QuestionSet questionId;
+	
+	private int avgResult;
+
+	public SurveyResult() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public SurveyResult(int surveyResultId, Survey surveyId, QuestionSet questionId, int avgResult) {
+		super();
+		this.surveyResultId = surveyResultId;
+		this.surveyId = surveyId;
+		this.questionId = questionId;
+		this.avgResult = avgResult;
+	}
+
+	public int getSurveyResultId() {
+		return surveyResultId;
+	}
+
+	public void setSurveyResultId(int surveyResultId) {
+		this.surveyResultId = surveyResultId;
+	}
+
+	public Survey getSurveyId() {
+		return surveyId;
+	}
+
+	public void setSurveyId(Survey surveyId) {
+		this.surveyId = surveyId;
+	}
+
+	public QuestionSet getQuestionId() {
+		return questionId;
+	}
+
+	public void setQuestionId(QuestionSet questionId) {
+		this.questionId = questionId;
+	}
+
+	public int getAvgResult() {
+		return avgResult;
+	}
+
+	public void setAvgResult(int avgResult) {
+		this.avgResult = avgResult;
+	}
+	
+}

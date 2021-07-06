@@ -1,0 +1,9 @@
+package be.kbc.internal.cts.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import be.kbc.internal.cts.entity.User;
+
+public interface UserDao extends JpaRepository<User, Integer> {
+
+}

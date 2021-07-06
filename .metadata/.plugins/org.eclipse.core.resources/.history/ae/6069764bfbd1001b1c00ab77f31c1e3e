@@ -1,0 +1,13 @@
+package be.kbc.internal.cts.service.impl;
+
+import be.kbc.internal.cts.entity.User;
+
+public class UserService implements be.kbc.internal.cts.service.UserService {
+
+	@Override
+	public User findByUserId(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

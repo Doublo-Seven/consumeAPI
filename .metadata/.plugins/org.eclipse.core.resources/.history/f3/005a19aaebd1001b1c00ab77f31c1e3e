@@ -1,0 +1,7 @@
+package be.kbc.internal.cts.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SurveyDao extends JpaRepository<Survey , int> {
+
+}

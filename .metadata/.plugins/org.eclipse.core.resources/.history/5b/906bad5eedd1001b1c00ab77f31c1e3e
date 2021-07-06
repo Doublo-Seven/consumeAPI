@@ -1,0 +1,69 @@
+package be.kbc.internal.cts.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Survey {
+
+	@Id
+	private int surveyId;
+	
+	@OneToOne
+	@Column(name = "userId")
+	private User userId;
+	
+	@OneToOne
+	@Column(name = "questionId")
+	private QuestionSet questionId;
+	
+	private int userRating;
+
+	public Survey() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Survey(int surveyId, User userId, QuestionSet questionId, int userRating) {
+		super();
+		this.surveyId = surveyId;
+		this.userId = userId;
+		this.questionId = questionId;
+		this.userRating = userRating;
+	}
+
+	public int getSurveyId() {
+		return surveyId;
+	}
+
+	public void setSurveyId(int surveyId) {
+		this.surveyId = surveyId;
+	}
+
+	public User getUserId() {
+		return userId;
+	}
+
+	public void setUserId(User userId) {
+		this.userId = userId;
+	}
+
+	public QuestionSet getQuestionId() {
+		return questionId;
+	}
+
+	public void setQuestionId(QuestionSet questionId) {
+		this.questionId = questionId;
+	}
+
+	public int getUserRating() {
+		return userRating;
+	}
+
+	public void setUserRating(int userRating) {
+		this.userRating = userRating;
+	}
+	
+}

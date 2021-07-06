@@ -1,0 +1,5 @@
+package be.kbc.internal.cts.dao;
+
+public interface UserDao {
+
+}

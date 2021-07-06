@@ -1,0 +1,77 @@
+package be.kbc.internal.cts.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
+public class QuestionSet {
+
+	private int questionId;
+	private LocalDate surveyMonth;
+	
+	@OneToOne
+	@Column(name = "teamId")
+	private Team teamId;
+	
+	private String question;
+	private int retentionInMonths;
+	
+	public QuestionSet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public QuestionSet(int questionId, LocalDate surveyMonth, Team teamId, String question, int retentionInMonths) {
+		super();
+		this.questionId = questionId;
+		this.surveyMonth = surveyMonth;
+		this.teamId = teamId;
+		this.question = question;
+		this.retentionInMonths = retentionInMonths;
+	}
+
+	public int getQuestionId() {
+		return questionId;
+	}
+
+	public void setQuestionId(int questionId) {
+		this.questionId = questionId;
+	}
+
+	public LocalDate getSurveyMonth() {
+		return surveyMonth;
+	}
+
+	public void setSurveyMonth(LocalDate surveyMonth) {
+		this.surveyMonth = surveyMonth;
+	}
+
+	public Team getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(Team teamId) {
+		this.teamId = teamId;
+	}
+
+	public String getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+
+	public int getRetentionInMonths() {
+		return retentionInMonths;
+	}
+
+	public void setRetentionInMonths(int retentionInMonths) {
+		this.retentionInMonths = retentionInMonths;
+	}
+	
+	
+}
